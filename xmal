@@ -1,0 +1,75 @@
+<Window x:Class="ProjectFlag.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectFlag"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0.133"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF373737" Offset="0.397"/>
+                <GradientStop Color="#FFB0B0B0" Offset="0.663"/>
+                <GradientStop Color="#FFD7D7D7" Offset="0.83"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Flags" Grid.Row="0" Grid.Column="1"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   FontSize="55" FontFamily="Kristen ITC" Foreground="#FF736161"/>
+
+        <TextBlock Text="select" Grid.Row="0" Grid.Column="3"
+            VerticalAlignment="Bottom" HorizontalAlignment="Center"
+            FontSize="20" FontWeight="Bold"/>
+
+        <ComboBox x:Name="contryCBox" Grid.Row="1" Grid.Column="3"
+                  Height="40" VerticalAlignment="Top" Margin="20" SelectionChanged="contryCBox_SelectionChanged">
+            <ComboBoxItem Content="Italy"/>
+            <ComboBoxItem Content="France"/>
+            <ComboBoxItem Content="Belgium"/>
+            <ComboBoxItem Content="Germany"/>
+            <ComboBoxItem Content=" Austria"/>
+            <ComboBoxItem Content="Romania"/>
+        </ComboBox>
+        <Border BorderBrush="Black" BorderThickness="3" Grid.Row="1" Grid.Column="1" Margin="30" x:Name="Frame01">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" x:Name="PartOfFarme0101"/>
+                    <ColumnDefinition Width="*" x:Name="PartOfFarme0102"/>
+                    <ColumnDefinition Width="*" x:Name="PartOfFarme0103"/>
+                </Grid.ColumnDefinitions>
+
+                <Rectangle x:Name="LeftPart" Grid.Column="0"/>
+                <Rectangle x:Name="CenterPart" Grid.Column="1"/>
+                <Rectangle x:Name="RightPart" Grid.Column="2"/>
+            </Grid>
+        </Border>
+
+        <Border BorderBrush="Black" BorderThickness="3" Grid.Row="1" Grid.Column="1" Margin="30" x:Name="Frame02">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" x:Name="PartOfFarme0201"/>
+                    <RowDefinition Height="*" x:Name="PartOfFarme0202"/>
+                    <RowDefinition Height="*" x:Name="PartOfFarme0203"/>
+                </Grid.RowDefinitions>
+
+                <Rectangle x:Name="TopPart" Grid.Row="0"/>
+                <Rectangle x:Name="MiddlePart" Grid.Row="1"/>
+                <Rectangle x:Name="BottomPart" Grid.Row="2"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Win
